@@ -1,0 +1,174 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <h1 id="title">Survey</h1>
+  <p id="description">Please fill out this short survey to help us improve.</p>
+
+  <form id="survey-form">
+
+    <!-- Name -->
+    <label for="name" id="name-label">
+      Name:
+      <input id="name" type="text" placeholder="Enter your name" required />
+    </label>
+
+    <!-- Email -->
+    <label for="email" id="email-label">
+      Email:
+      <input id="email" type="email" placeholder="Enter your email" required />
+    </label>
+
+    <!-- Number -->
+    <label for="number" id="number-label">
+      Rate the experience (1–10):
+      <input id="number" type="number" min="1" max="10" placeholder="Rate the experience" required />
+    </label>
+
+    <!-- Dropdown -->
+    <label for="dropdown">How did you hear about us?</label>
+    <select id="dropdown" name="referrer" required>
+      <option value="">(select one)</option>
+      <option value="news">freeCodeCamp News</option>
+      <option value="youtube">freeCodeCamp YouTube Channel</option>
+      <option value="forum">freeCodeCamp Forum</option>
+      <option value="other">Other</option>
+    </select>
+
+    <!-- Radio buttons -->
+    <fieldset>
+      <legend>Would you recommend us to a friend?</legend>
+      <label>
+        <input type="radio" name="recommend" value="yes" required /> Yes
+      </label>
+      <label>
+        <input type="radio" name="recommend" value="no" /> No
+      </label>
+    </fieldset>
+
+    <!-- Checkboxes -->
+    <fieldset>
+      <legend>Agreements</legend>
+      <label>
+        <input type="checkbox" name="data-stored" value="yes" /> Accept Data
+      </label>
+      <label>
+        <input type="checkbox" name="terms" value="yes" /> Accept Terms &amp; Conditions
+      </label>
+    </fieldset>
+
+    <!-- Comments -->
+    <label for="comments">Additional Feedback:</label>
+    <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Write your feedback here..."></textarea>
+
+    <!-- Submit -->
+    <input id="submit" type="submit" value="Submit" />
+
+  </form>
+</body>
+</html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+/* General Page Styles */
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+/* Headings + Paragraph */
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+/* Form Layout */
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  background-color: #2a2a40;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Fieldset styling */
+fieldset {
+  border: none;
+  padding: 1.5rem 0;
+  border-bottom: 2px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* Input + Select + Textarea */
+input,
+textarea,
+select {
+  margin-top: 0.5rem;
+  width: 100%;
+  min-height: 2em;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #0a0a23;
+  background-color: #0a0a23;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+/* Radio + Checkbox inline */
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+/* Submit Button */
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1.5em auto;
+  height: 2.5em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #3b3b4f;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #575775;
+}
+
+
+
+** end of styles.css **
+
